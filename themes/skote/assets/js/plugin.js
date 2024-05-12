@@ -1,8 +1,8 @@
 
 !function ($) {
     "use strict";
-    if (window.sessionStorage) {
-        var alreadyVisited = sessionStorage.getItem("is_visited");
+    if (window.localStorage) {
+        var alreadyVisited = localStorage.getItem("is_visited");
         if (alreadyVisited) {
             switch (alreadyVisited) {
                 case "light-mode-switch":

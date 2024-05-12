@@ -32,8 +32,8 @@ class MaintenanceMode extends Component
                     <script>
                         !function ($) {
                         "use strict";
-                        if (window.sessionStorage) {
-                            var alreadyVisited = sessionStorage.getItem("is_visited");
+                        if (window.localStorage) {
+                            var alreadyVisited = localStorage.getItem("is_visited");
                             var baseUrl = "{$baseUrl}";
                             if (alreadyVisited) {
                                 switch (alreadyVisited) {

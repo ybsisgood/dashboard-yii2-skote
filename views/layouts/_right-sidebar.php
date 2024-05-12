@@ -65,26 +65,26 @@ $scriptThemes = <<<JS
 (function ($) {
     'use strict';
     function initSettings() {
-        if (window.sessionStorage) {
-            var alreadyVisited = sessionStorage.getItem("is_visited");
+        if (window.localStorage) {
+            var alreadyVisited = localStorage.getItem("is_visited");
             if (!alreadyVisited) {
                 if ($('html').attr('dir') === 'rtl' && $('html').attr('data-bs-theme') === 'dark') {
                     $("#dark-rtl-mode-switch").prop('checked', true);
                     $("#light-mode-switch").prop('checked', false);  
-                    sessionStorage.setItem("is_visited", "dark-rtl-mode-switch");
+                    localStorage.setItem("is_visited", "dark-rtl-mode-switch");
                     updateThemeSetting(alreadyVisited);
                 }else if ($('html').attr('dir') === 'rtl') {
                     $("#rtl-mode-switch").prop('checked', true);
                     $("#light-mode-switch").prop('checked', false);
-                    sessionStorage.setItem("is_visited", "rtl-mode-switch");
+                    localStorage.setItem("is_visited", "rtl-mode-switch");
                     updateThemeSetting(alreadyVisited);
                 }else if ($('html').attr('data-bs-theme') === 'dark') {
                     $("#dark-mode-switch").prop('checked', true);
                     $("#light-mode-switch").prop('checked', false);
-                    sessionStorage.setItem("is_visited", "dark-mode-switch");
+                    localStorage.setItem("is_visited", "dark-mode-switch");
                     updateThemeSetting(alreadyVisited);
                 } else {
-                    sessionStorage.setItem("is_visited", "light-mode-switch");
+                    localStorage.setItem("is_visited", "light-mode-switch");
                 }
             } else {
                 $(".right-bar input:checkbox").prop('checked', false);
@@ -115,7 +115,7 @@ $scriptThemes = <<<JS
             $('html').attr('data-bs-theme', 'light');
             if($("#app-style").attr('href') != baseUrl + '/themes/skote/assets/css/app.min.css')
             $("#app-style").attr('href', baseUrl + '/themes/skote/assets/css/app.min.css');
-            sessionStorage.setItem("is_visited", "light-mode-switch");
+            localStorage.setItem("is_visited", "light-mode-switch");
         } else if ($("#dark-mode-switch").prop("checked") == true && id === "dark-mode-switch") {
             $("html").removeAttr("dir");
             $("#light-mode-switch").prop("checked", false);
@@ -126,7 +126,7 @@ $scriptThemes = <<<JS
                 $("#bootstrap-style").attr('href', baseUrl + '/themes/skote/assets/css/bootstrap.min.css');
             if($("#app-style").attr('href') != baseUrl + '/themes/skote/assets/css/app.min.css')
                 $("#app-style").attr('href', baseUrl + '/themes/skote/assets/css/app.min.css');
-            sessionStorage.setItem("is_visited", "dark-mode-switch");
+                localStorage.setItem("is_visited", "dark-mode-switch");
         } else if ($("#rtl-mode-switch").prop("checked") == true && id === "rtl-mode-switch") {
             $("#light-mode-switch").prop("checked", false);
             $("#dark-mode-switch").prop("checked", false);
@@ -137,7 +137,7 @@ $scriptThemes = <<<JS
                 $("#app-style").attr('href', baseUrl + '/themes/skote/assets/css/app-rtl.min.css');
             $("html").attr("dir", 'rtl');
             $('html').attr('data-bs-theme', 'light');
-            sessionStorage.setItem("is_visited", "rtl-mode-switch");
+            localStorage.setItem("is_visited", "rtl-mode-switch");
         }
         else if ($("#dark-rtl-mode-switch").prop("checked") == true && id === "dark-rtl-mode-switch") {
             $("#light-mode-switch").prop("checked", false);
@@ -149,7 +149,7 @@ $scriptThemes = <<<JS
                 $("#app-style").attr('href', baseUrl + '/themes/skote/assets/css/app-rtl.min.css');
             $("html").attr("dir", 'rtl');
             $('html').attr('data-bs-theme', 'dark');
-            sessionStorage.setItem("is_visited", "dark-rtl-mode-switch");
+            localStorage.setItem("is_visited", "dark-rtl-mode-switch");
         }
     }
 

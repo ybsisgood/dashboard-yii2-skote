@@ -11,6 +11,9 @@ return [
     'robotTxt' => 'noindex, nofollow',
     'supportEmail' => 'support@example.com',
 
+    'bsDependencyEnabled' => false,
+    'bsVersion' => '5.x',
+
 
     'adminEmail' => 'admin@example.com',
     'senderEmail' => 'noreply@example.com',
