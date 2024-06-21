@@ -77,7 +77,7 @@ $this->registerMetaTag(['name' => 'robots', 'content' => Yii::$app->params['robo
     </script>
     <?php $this->head() ?>
 </head>
-<body data-sidebar="dark">
+<body data-sidebar="dark" data-keep-enlarged="true" class="vertical-collpsed" style="min-height: 100vh">
 <?php $this->beginBody() ?>
 
 <div id="layout-wrapper">
