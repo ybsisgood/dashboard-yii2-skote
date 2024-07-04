@@ -33,6 +33,8 @@ class AppAsset extends AssetBundle
         'themes/skote/assets/libs/node-waves/waves.min.js',
 
         'themes/skote/assets/js/app.js',
+        'themes/skote/assets/libs/sweetalert2/sweetalert2.all.min.js',
+        'themes/custom/disable_submit.js',
     ];
     public $depends = [
         // 'yii\web\YiiAsset',
