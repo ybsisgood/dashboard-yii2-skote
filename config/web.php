@@ -53,12 +53,12 @@ $config = [
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
-            ],
+            // 'targets' => [
+            //     [
+            //         'class' => 'yii\log\FileTarget',
+            //         'levels' => ['error', 'warning'],
+            //     ],
+            // ],
         ],
         'db' => $db,
         'urlManager' => [
@@ -66,10 +66,15 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '/' => 'site/index',
+                // 'gallery/view/<seo_url:[\w\-]+>' => 'gallery/view', // contoh
+                
             ],
         ],
         'maintenanceMode' => [ 
             'class' => 'app\components\MaintenanceMode',
+        ],
+        'globalfunction' => [
+            'class' => 'app\components\GlobalFunction',
         ],
     ],
     'params' => $params,
